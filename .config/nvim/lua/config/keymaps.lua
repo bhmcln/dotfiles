@@ -4,3 +4,4 @@
 local map = vim.keymap.set
 
 map("n", "<leader>cx", "<cmd>Neogen func<CR>")
+map("n", "<leader>zz", "<cmd>ZenMode<CR>")
