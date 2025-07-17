@@ -4,7 +4,7 @@
   // "position": "bottom", // Waybar position (top|bottom|left|right)
   "height": 25, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
-  "spacing": 4, // Gaps between modules (4px)
+  "spacing": 0, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces",
@@ -57,6 +57,10 @@
   },
   "hyprland/submap": {
     "format": "<span style=\"italic\">{}</span>"
+  },
+  "hyprland/window": {
+    //"format": "{}"   // <--- these is the default value  
+    "format": "{class}"
   },
   "sway/scratchpad": {
     "format": "{icon} {count}",
@@ -152,8 +156,8 @@
     },
     "format": "{capacity}% {icon}",
     "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
+    "format-charging": "{capacity}% ↑",
+    "format-plugged": "{capacity}% ↑",
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
@@ -182,7 +186,7 @@
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
     "format-ethernet": "{ipaddr}/{cidr} ",
-    "format-wifi": " ",
+    "format-wifi": "",
     "tooltip-format": "{essid} ({signalStrength}%) ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
